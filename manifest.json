@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Site Usage Timer",
+    "version": "1.0",
+    "description": "A Chrome extension that tracks the time spent on a site.",
+    "permissions": ["activeTab", "storage"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["logic.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    
+    }
+    
+  }
+  
